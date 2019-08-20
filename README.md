@@ -19,17 +19,15 @@
 - 针对的消息不重要，丢失也无所谓。
 - 网络层面，传输压力小。
 ```
-
    ![](../image/QoS_level_0.png)
 
    ```sequence
    participant publisher
    participant broker
    participant subscriber
-   
-   publisher->broker:PUBLISH[QoS=0]
+   publisher->>broker:PUBLISH[QoS=0]
    broker-->subscriber:PUBLISH
-   publisher->publisher:Delete message
+   publisher-->>publisher:Delete message
    ```
 
 - QoS level 1
