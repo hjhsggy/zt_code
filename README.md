@@ -22,14 +22,14 @@
 
    ![](../image/QoS_level_0.png)
 
-   ```mermaid
-   sequenceDiagram
+   ```sequence
    participant publisher
    participant broker
    participant subscriber
-   publisher->>broker:PUBLISH[QoS=0]
-   broker->>subscriber:PUBLISH
-   publisher->>publisher:Delete message
+   
+   publisher->broker:PUBLISH[QoS=0]
+   broker->subscriber:PUBLISH
+   publisher->publisher:Delete message
    ```
 
 - QoS level 1
