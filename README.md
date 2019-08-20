@@ -28,7 +28,7 @@
    participant subscriber
    
    publisher->broker:PUBLISH[QoS=0]
-   broker->subscriber:PUBLISH
+   broker-->subscriber:PUBLISH
    publisher->publisher:Delete message
    ```
 
